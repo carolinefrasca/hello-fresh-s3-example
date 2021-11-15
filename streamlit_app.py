@@ -17,7 +17,7 @@ def read_file(filename):
 
 content = read_file("hellofreshexample/HelloFresh Example Data - Sheet1.csv")
 
-# Print results.
-for line in content.strip().split("\n"):
-    name, pet = line.split(",")
-    st.write(f"{name} has a :{pet}:")
+# # Print results.
+# for line in content.strip().split("\n"):
+#     name, pet = line.split(",")
+#     st.write(f"{name} has a :{pet}:")
