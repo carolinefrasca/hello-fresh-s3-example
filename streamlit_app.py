@@ -11,6 +11,8 @@ s3 = boto3.resource(
     aws_secret_access_key=AWS_SECRET_ACCESS_KEY
 )
 
+for bucket in s3.buckets.all():
+    print(bucket.name)
 
 
 
