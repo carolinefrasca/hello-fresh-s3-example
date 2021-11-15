@@ -15,7 +15,7 @@ def read_file(filename):
     with fs.open(filename) as f:
         return f.read().decode("utf-8")
 
-content = read_file("hellofreshexample/HelloFresh Example Data - Sheet1.csv")
+content = read_file("hellofreshexample.s3.us-east-2.amazonaws.com/HelloFresh+Example+Data+-+Sheet1.csv")
 
 # # Print results.
 # for line in content.strip().split("\n"):
