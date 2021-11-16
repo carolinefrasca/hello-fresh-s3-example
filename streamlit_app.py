@@ -1,6 +1,7 @@
 import streamlit as st
 import s3fs
 import os
+import pandas as pd
 
 st.title("Streamlit x HelloFresh")
 st.header("AWS S3 Demo")
@@ -17,6 +18,9 @@ def read_file(filename):
         return f.read().decode("utf-8")
 
 content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
+
+data = pd.read_csv("s3:/hellofreshexample/HelloFreshExample - SampleData.csv")
+st.dataframe(data)
 
 # Print results.
 st.subheader("Read data from CSV file:")
