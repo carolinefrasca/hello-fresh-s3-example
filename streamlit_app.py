@@ -2,7 +2,7 @@ import streamlit as st
 import s3fs
 import os
 
-st.title("Streamlit x HelloFresh)
+st.title("Streamlit x HelloFresh")
 st.header("AWS S3 Demo")
          
 # Create connection object.
