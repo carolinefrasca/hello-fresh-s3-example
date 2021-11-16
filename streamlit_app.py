@@ -3,11 +3,22 @@ import os
 import streamlit as st
 import boto3
 
+key_id = st.secrets["AWS_ACCESS_KEY_ID"]
+key = st.secrets["AWS_SECRET_ACCESS_KEY"]
+
+# s3 = boto3.client(
+#    's3',
+#    aws_access_key_id='AKIAIO5FODNN7EXAMPLE',
+#    aws_secret_access_key='ABCDEF+c2L7yXeGvUyrPgYsDnWRRC1AYEXAMPLE',
+#    config=Config(signature_version='s3v4')
+# )
+
 s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
-    aws_access_key_id=st.secrets["AWS_ACCESS_KEY_ID"],
-    aws_secret_access_key=st.secrets["AWS_SECRET_ACCESS_KEY"]
+    aws_access_key_id=key_id,
+    aws_secret_access_key=key,
+    config=Config(signature_version='s3v4')
 )
 
 for bucket in s3.buckets.all():
