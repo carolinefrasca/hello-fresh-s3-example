@@ -1,6 +1,5 @@
 import streamlit as st
 import s3fs
-import os
 import pandas as pd
 
 st.title("Streamlit x HelloFresh")
