@@ -15,10 +15,10 @@ def read_file(filename):
 
 content = read_file("hellofreshexample/HelloFreshExample.csv")
 
-# # Print results.
-# for line in content.strip().split("\n"):
-#     name, pet = line.split(",")
-#     st.write(f"{name} has a :{pet}:")
+# Print results.
+for line in content.strip().split("\n"):
+    first_name, last_name, dietary_restrictions, fave_ingredients = line.split(",")
+    st.write(f"First name: {first_name}; Last name: {last_name}")
 
 # import s3fs
 # import os
