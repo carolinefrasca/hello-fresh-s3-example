@@ -17,8 +17,7 @@ s3 = boto3.resource(
     service_name='s3',
     region_name='us-east-2',
     aws_access_key_id=key_id,
-    aws_secret_access_key=key,
-    config=Config(signature_version='s3v4')
+    aws_secret_access_key=key
 )
 
 for bucket in s3.buckets.all():
