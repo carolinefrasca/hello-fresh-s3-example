@@ -15,11 +15,15 @@ fs = s3fs.S3FileSystem(anon=False)
 @st.cache(ttl=600)
 def read_file(filename):
     with fs.open(filename) as f:
+        df = pd.read_csv(f)
         return f.read().decode("utf-8")
+
+# with fs.open('mybucket/path/to/object/foo.pkl') as f:
+#     df = pd.read_csv(f)
 
 content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
 
-df = pd.read_csv('s3://hellofreshexample/HelloFreshExample - SampleData.csv')
+#df = pd.read_csv('s3://hellofreshexample/HelloFreshExample - SampleData.csv')
 # pd.read_csv(fs.open("hellofreshexample/HelloFreshExample - SampleData.csv"))
 #data = pd.read_csv("hellofreshexample/HelloFreshExample - SampleData.csv")
 #st.dataframe(data)
