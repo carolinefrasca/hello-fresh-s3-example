@@ -19,7 +19,7 @@ def read_file(filename):
 
 content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
 
-data = pd.read_csv("s3:/hellofreshexample/HelloFreshExample - SampleData.csv")
+data = pd.read_csv("hellofreshexample/HelloFreshExample - SampleData.csv")
 st.dataframe(data)
 
 # Print results.
