@@ -15,10 +15,10 @@ def read_file(filename):
 
 content = read_file("hellofreshexample/HelloFreshExample.csv")
 
-# Print results.
-for line in content.strip().split("\n"):
-    name, pet = line.split(",")
-    st.write(f"{name} has a :{pet}:")
+# # Print results.
+# for line in content.strip().split("\n"):
+#     name, pet = line.split(",")
+#     st.write(f"{name} has a :{pet}:")
 
 
 
