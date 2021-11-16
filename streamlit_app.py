@@ -14,7 +14,7 @@ fs = s3fs.S3FileSystem(anon=False)
 @st.cache(ttl=600)
 def read_file(filename):
     with fs.open(filename) as f:
-        df = pd.read_csv(f)
+        #df = pd.read_csv(f)
         return f.read().decode("utf-8")
 
 content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
