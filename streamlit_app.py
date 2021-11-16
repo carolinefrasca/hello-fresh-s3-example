@@ -17,6 +17,7 @@ def read_file(filename):
         return f.read().decode("utf-8")
 
 path_to_file = st.secrets.BUCKET_NAME + "/HelloFreshExample - SampleData.csv"
+st.write("Path to file is: " + path_to_file)
 content = read_file(path_to_file)
 
 # Print results.
