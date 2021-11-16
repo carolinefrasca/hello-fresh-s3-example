@@ -18,6 +18,6 @@ def read_file(filename):
 content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
 
 # Print results.
-for line in content.strip().split("\n")[1:]::
+for line in content.strip().split("\n")[1:]:
     first_name, last_name, dietary_restrictions, fave_ingredients = line.split(",")
     st.write(f"First name: {first_name}; Last name: {last_name}")
