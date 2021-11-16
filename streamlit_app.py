@@ -20,6 +20,6 @@ content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
 # Print results.
 st.header("Read data from CSV file:")
 for line in content.strip().split("\n")[1:]:
-    first_name, last_name, dietary_restrictions, fave_ingredients = line.split(",")
-    st.write(f"{first_name} {last_name}'s favorite ingredient is {favorite_ingredient}.")
+    first_name, last_name, dietary_restrictions, fave_ingredient = line.split(",")
+    st.write(f"{first_name} {last_name}'s favorite ingredient is {fave_ingredient}.")
 #     st.write(f"First name: {first_name}; Last name: {last_name}")
