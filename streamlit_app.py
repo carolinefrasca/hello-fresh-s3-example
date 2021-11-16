@@ -1,6 +1,7 @@
 import s3fs
 import os
 import streamlit as st
+import boto3
 
 s3 = boto3.resource(
     service_name='s3',
