@@ -19,7 +19,8 @@ def read_file(filename):
 
 content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
 
-data = pd.read_csv("hellofreshexample/HelloFreshExample - SampleData.csv")
+pd.read_csv(fs.open("hellofreshexample/HelloFreshExample - SampleData.csv"))
+#data = pd.read_csv("hellofreshexample/HelloFreshExample - SampleData.csv")
 st.dataframe(data)
 
 # Print results.
