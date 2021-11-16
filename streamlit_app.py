@@ -2,6 +2,8 @@ import streamlit as st
 import s3fs
 import os
 
+st.title("Streamlit x HelloFresh: AWS S3 Demo")
+         
 # Create connection object.
 # `anon=False` means not anonymous, i.e. it uses access keys to pull data.
 fs = s3fs.S3FileSystem(anon=False)
@@ -16,6 +18,6 @@ def read_file(filename):
 content = read_file("hellofreshexample/HelloFreshExample - SampleData.csv")
 
 # Print results.
-for line in content.strip().split("\n"):
+for line in content.strip().split("\n")[1:]::
     first_name, last_name, dietary_restrictions, fave_ingredients = line.split(",")
     st.write(f"First name: {first_name}; Last name: {last_name}")
